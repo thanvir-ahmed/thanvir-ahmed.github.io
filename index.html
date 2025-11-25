@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thanvir Ahmed Portfolio</title>
   <style>
     body {
@@ -10,109 +10,388 @@
       font-family: Arial, sans-serif;
       background: #0d1117;
       color: #e6edf3;
+      line-height: 1.7;
     }
     header {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
       background: linear-gradient(135deg, #1f6feb, #2ea043);
       color: white;
     }
-    header h1 {
-      margin: 0;
-      font-size: 48px;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 20px;
-    }
+    header h1 { font-size: 56px; margin: 0; }
+    header p { font-size: 22px; opacity: 0.95; }
 
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 0;
+    nav {
+      background: #161b22;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 1px solid #30363d;
     }
+    nav a {
+      color: #e6edf3;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #58a6ff; }
+
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
 
     .card {
       background: #161b22;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      padding: 30px;
+      margin-bottom: 35px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.08);
       transition: 0.3s;
     }
-    .card:hover {
-      transform: scale(1.02);
-    }
+    .card:hover { transform: scale(1.01); }
 
-    h2 {
-      border-left: 5px solid #1f6feb;
-      padding-left: 10px;
-    }
+    h2 { border-left: 5px solid #1f6feb; padding-left: 12px; margin-bottom: 20px; }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .skill-box {
       background: #0d1117;
-      border-top: 1px solid #30363d;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+    }
+
+    .timeline {
+      border-left: 3px solid #1f6feb;
+      padding-left: 20px;
+    }
+    .timeline-item {
+      margin-bottom: 25px;
+    }
+    .timeline-item h3 {
+      margin: 0;
+      color: #58a6ff;
+    }
+
+    .project-box {
+      border: 1px solid #30363d;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      background: #0e1622;
     }
 
     .btn {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 28px;
       background: #1f6feb;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      font-size: 18px;
+      border-radius: 6px;
       transition: 0.3s;
     }
-    .btn:hover {
-      background: #388bfd;
+    .btn:hover { background: #388bfd; }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      background: #0d1117;
+      border-top: 1px solid #30363d;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Md. Thanvir Ahmed</h1>
-    <p>Lead Software Architect | Java | Spring Boot | AWS | Automation</p>
-  </header>
 
-  <div class="container">
-    <div class="card">
-      <h2>About Me</h2>
-      <p>Experienced Software Architect with strong background in enterprise Java applications, microservices, cloud technologies, and test automation.</p>
-    </div>
+<header>
+  <h1>Md. Thanvir Ahmed</h1>
+  <p>Lead Software Architect • Enterprise Java • Cloud • Automation • System Design</p>
+</header>
 
-    <div class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>Java, Spring Boot, Microservices</li>
-        <li>Selenium, Cucumber, Playwright</li>
-        <li>AWS, Docker, Jenkins</li>
-        <li>MySQL, PostgreSQL, DynamoDB</li>
-      </ul>
-    </div>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <div class="card">
-      <h2>Projects</h2>
-      <p>✔ Omron VitalSight Automation</p>
-      <p>✔ Rakuten Moderator Web</p>
-      <p>✔ e-Commerce APIs, ESB Systems</p>
-    </div>
+<div class="container">
 
-    <div class="card">
-      <h2>Download CV</h2>
-      <a class="btn" href="BJIT_CV_md_thanvir_ahmed_19861125.doc">Download</a>
+  <div id="about" class="card">
+    <h2>About Me</h2>
+    <p>I am a highly experienced Lead Software Architect with 13+ years of expertise in designing scalable enterprise systems, developing high-performance microservices, and building automation frameworks for large global platforms. My background combines strong backend engineering, QA automation mastery, DevOps enablement, cloud system design, and team leadership.</p>
+
+    <p>I specialize in:</p>
+    <ul>
+      <li>Architecting microservice ecosystems with Spring Boot, WebFlux, and event-driven patterns</li>
+      <li>Automation engineering with Selenium, Cucumber, Playwright, Rest-Assured</li>
+      <li>Cloud-native development using AWS & Azure</li>
+      <li>System performance optimization and architectural modernization</li>
+      <li>Leading distributed teams across Japan, Europe, and the US</li>
+    </ul>
+  </div>
+
+  <div id="skills" class="card">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-box">
+        <h3>Programming Languages</h3>
+        <p>Java (Expert), C#, C++, PHP, JavaScript, Groovy</p>
+      </div>
+      <div class="skill-box">
+        <h3>Frameworks & Backend</h3>
+        <p>Spring Boot, Spring MVC, JPA/Hibernate, WebFlux, Alfresco APS, JSP/Servlet</p>
+      </div>
+      <div class="skill-box">
+        <h3>Automation & QA</h3>
+        <p>Selenium, Cucumber, TestNG, JUnit, Playwright, Appium, Rest-Assured</p>
+      </div>
+      <div class="skill-box">
+        <h3>Database Systems</h3>
+        <p>MySQL, PostgreSQL, Oracle, DynamoDB, MongoDB, MSSQL</p>
+      </div>
+      <div class="skill-box">
+        <h3>Cloud & DevOps</h3>
+        <p>AWS, Azure, Docker, Jenkins, GitHub Actions, CI/CD pipelines</p>
+      </div>
+      <div class="skill-box">
+        <h3>Monitoring & Tools</h3>
+        <p>Grafana, Prometheus, Jira, Confluence, IntelliJ, Azure DevOps</p>
+      </div>
     </div>
   </div>
 
-  <footer>
-    © 2025 Thanvir Ahmed
-  </footer>
+  <div id="experience" class="card">
+      <h2>Professional Experience (Full Details)</h2>
+      <div class="timeline">
 
-  <script>
-    console.log("Portfolio Loaded Successfully!");
-  </script>
+        <div class="timeline-item">
+          <h3>Lead Software Architect — BJIT Limited (07/2025 – Present)</h3>
+          <ul>
+            <li>Leading cross‑functional engineering teams and mentoring senior/junior developers.</li>
+            <li>Designing microservice-based enterprise systems using Java, Spring Boot, and AWS.</li>
+            <li>Overseeing CI/CD pipelines, DevOps practices, security standards, and performance optimization.</li>
+            <li>Preparing system design artifacts: sequence diagrams, flowcharts, component diagrams.</li>
+            <li>Reviewing code, test scripts, and system architecture for consistent quality.</li>
+            <li>Conducting risk analysis, architectural reviews, and R&D for emerging technologies.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Principal Software Engineer — BJIT Limited (07/2022 – 06/2025)</h3>
+          <ul>
+            <li>Led automation and backend development for high‑scale Japanese systems.</li>
+            <li>Integrated Prometheus and built custom dashboards using Grafana.</li>
+            <li>Designed sequence diagrams, workflow charts, and technical documentation.</li>
+            <li>Wrote unit tests, automated test scripts, manual test cases.</li>
+            <li>Coordinated with DevOps teams for deployment, logging, and monitoring.</li>
+            <li>Supported team members with troubleshooting and architectural decisions.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Senior Software Engineer — BJIT Limited (08/2019 – 06/2022)</h3>
+          <ul>
+            <li>Developed workflow systems using Alfresco APS for industrial IoT solutions.</li>
+            <li>Performed R&D for implementing complex backend features.</li>
+            <li>Created unit tests, architectural documentation, and detailed diagrams.</li>
+            <li>Communicated with international clients during sprint reviews.</li>
+            <li>Tracked development progress using Azure DevOps.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Senior Software Engineer — Metatude Asia Ltd (01/2019 – 08/2019)</h3>
+          <ul>
+            <li>Improved performance and scalability of enterprise learning platform Ignity.</li>
+            <li>Conducted technical sessions, peer programming, and code audits.</li>
+            <li>Implemented REST APIs, integrated modules, and redesigned slow components.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Senior Software Engineer — Metatude Asia Ltd (04/2018 – 12/2018)</h3>
+          <ul>
+            <li>Implemented APIs using Spring MVC & Hibernate for SurveyVisual and Coursepath.</li>
+            <li>Designed diagrams, applied SOLID principles, and maintained system architecture.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Software Engineer — Metatude Asia Ltd (04/2016 – 03/2018)</h3>
+          <ul>
+            <li>Implemented REST APIs for large‑scale reporting system Ignity.</li>
+            <li>Maintained SVN repositories, documentation, diagrams, and testing coverage.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Associate Software Engineer — Metatude Asia Ltd (12/2014 – 03/2016)</h3>
+          <ul>
+            <li>Developed E‑Learning features for Coursepath LMS using WAX framework.</li>
+            <li>Communicated with Dutch stakeholders for requirement clarification.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Junior Software Engineer — Metatude Asia Ltd (01/2014 – 11/2014)</h3>
+          <ul>
+            <li>Implemented new APIs and modules for Coursepath system.</li>
+            <li>Performed functional & non‑functional testing and documentation updates.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Programmer — ConnectBD Ltd (12/2012 – 12/2013)</h3>
+          <ul>
+            <li>Maintained government web applications for Roads & Highways Department (RHD).</li>
+            <li>Optimized SQL queries and added new CMS features.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Software Engineer — Wempro (01/2012 – 11/2013)</h3>
+          <ul>
+            <li>Developed JSP/Servlet-based dynamic applications and PHP/Drupal websites.</li>
+            <li>Designed relational database schemas and integrated front-end modules.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="projects" class="card">" class="card">
+      <h2>Project History (Full Details)</h2>
+
+      <div class="project-box">
+        <h3>Omron VitalSight Test Automation (03/2022 – Present)</h3>
+        <p><strong>Role:</strong> Lead Software Architect • <strong>Team Size:</strong> 15 • <strong>Tech:</strong> Selenium, Cucumber, Java, Rest-Assured, AWS, DynamoDB, Maven, Jenkins</p>
+        <ul>
+          <li>Architected the entire automation ecosystem for healthcare IoT devices.</li>
+          <li>Designed UI automation, API automation & database validation framework.</li>
+          <li>Established CI/CD pipelines and AWS environment integration.</li>
+          <li>Led requirement analysis, risk management, and automation strategy.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>Rakuten Moderator Web (2021–2022)</h3>
+        <p><strong>Tech:</strong> Java, Spring MVC, JSP, Mockito, REST APIs</p>
+        <ul>
+          <li>Developed content moderation platform for large-scale e-commerce systems.</li>
+          <li>Prepared unit tests, sequence diagrams & system documentation.</li>
+          <li>Worked with global QA, DevOps and backend teams to deliver production releases.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>Rakuten Auth API (2021)</h3>
+        <p><strong>Tech:</strong> Java, Spring MVC, Redis, SOAP</p>
+        <ul>
+          <li>Developed secure authentication and authorization APIs.</li>
+          <li>Implemented Redis cache handling for session management.</li>
+          <li>Wrote unit & integration testing for all authentication modules.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>Rakuten Mobile App API (2020)</h3>
+        <p><strong>Tech:</strong> Spring WebFlux, MongoDB</p>
+        <ul>
+          <li>Built reactive REST APIs for mobile applications.</li>
+          <li>Performed performance tuning & non-blocking IO operations using WebFlux.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>Enterprise Bus Service (ESB) (2020)</h3>
+        <p><strong>Tech:</strong> Spring WebFlux, Spring Cloud</p>
+        <ul>
+          <li>Implemented enterprise-level microservice communication layer.</li>
+          <li>Configured Spring Cloud for distributed configuration management.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>Industrial IoT Workflow (2019–2020)</h3>
+        <p><strong>Tech:</strong> Alfresco APS, Azure, JPA</p>
+        <ul>
+          <li>Implemented workflow automation for industrial sensors.</li>
+          <li>Developed Azure functions for event-driven tasks.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>Ignity (Dynamic Reporting) (2016–2019)</h3>
+        <p><strong>Tech:</strong> Angular, Spring, Hibernate</p>
+        <ul>
+          <li>Built dynamic dashboard for large enterprise reporting.</li>
+          <li>Optimized MySQL and MSSQL queries for better latency.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>User Management Console (2018)</h3>
+        <p><strong>Tech:</strong> Java, REST, MSSQL</p>
+        <ul>
+          <li>Implemented user and access control modules.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>Coursepath LMS (2014–2016)</h3>
+        <p><strong>Tech:</strong> WAX Framework, JSON, jQuery</p>
+        <ul>
+          <li>Developed end-to-end modules for e-learning system.</li>
+          <li>Maintained versioning through SVN & documentation.</li>
+        </ul>
+      </div>
+
+      <div class="project-box">
+        <h3>Central Management System (CMS) – Govt. of Bangladesh (2012–2013)</h3>
+        <p><strong>Tech:</strong> ASP.NET, SQL Server</p>
+        <ul>
+          <li>Enhancement and maintenance of government administrative systems.</li>
+          <li>Developed reporting and archival modules.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div id="certifications" class="card">" class="card">
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Cloud Practitioner (2024)</li>
+      <li>Selenium WebDriver Advanced (2024)</li>
+      <li>REST Assured API Automation (2024)</li>
+      <li>Reactive Microservices with Spring WebFlux (2020)</li>
+      <li>Software Architecture & Design (2015)</li>
+    </ul>
+  </div>
+
+  <div id="contact" class="card">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> thanvir@example.com</p>
+    <p><strong>Location:</strong> Dhaka, Bangladesh</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Thanvir Ahmed — Portfolio Website
+</footer>
+
+<script>
+  console.log("Portfolio Loaded Successfully!");
+</script>
+
 </body>
 </html>
