@@ -19,8 +19,7 @@
     .eyebrow{display:inline-block;background:rgba(37,99,235,.22);color:#bfdbfe;border:1px solid rgba(147,197,253,.25);padding:8px 14px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:20px}
     h1{font-size:clamp(40px,6vw,72px);line-height:1.05;margin:0 0 18px;letter-spacing:-2px}
     .hero h2{color:#bfdbfe;font-size:24px;margin:0 0 22px}.hero p{color:#cbd5e1;max-width:800px;font-size:18px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700;margin:6px;border:1px solid rgba(255,255,255,.25)}
-    .btn-primary{background:linear-gradient(135deg,var(--primary),var(--sky));border:0;color:white}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700;margin:6px;border:1px solid rgba(255,255,255,.25)}.btn-primary{background:linear-gradient(135deg,var(--primary),var(--sky));border:0;color:white}
     .profile-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.28)}
     .avatar{width:190px;height:190px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#0ea5e9);border:6px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:800;color:#fff}
     .profile-card h3{text-align:center;margin:0;font-size:22px}.profile-card p{text-align:center;margin:8px 0 0;font-size:14px}
@@ -32,7 +31,8 @@
     .dark{background:var(--bg);color:white}.dark .section-title p,.dark .card p,.dark .card li{color:#cbd5e1}.dark .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.10)}
     .timeline{position:relative;padding-left:28px}.timeline:before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:var(--line)}
     .timeline-item{position:relative;margin-bottom:28px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 12px 30px rgba(15,23,42,.05)}.timeline-item:before{content:"";position:absolute;left:-26px;top:28px;width:14px;height:14px;border-radius:50%;background:var(--primary);border:4px solid #dbeafe}.timeline-item h3{margin:0 0 4px}.meta{color:var(--primary);font-weight:700;margin-bottom:12px}
-    .project-title{display:flex;justify-content:space-between;gap:12px}.project-title span{background:#ecfeff;color:#0e7490;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:700;height:max-content}
+    .project-title{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.project-title span{background:#ecfeff;color:#0e7490;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:700;height:max-content;white-space:nowrap}
+    .project-meta{color:#93c5fd!important}.project-card{min-height:300px}
     .contact-box{background:linear-gradient(135deg,#2563eb,#0ea5e9);color:white;border-radius:26px;padding:40px;text-align:center}.contact-box p{color:#e0f2fe}
     footer{text-align:center;padding:26px;background:#020617;color:#94a3b8;font-size:14px}
     @media(max-width:900px){.hero-grid,.grid-2,.grid-3{grid-template-columns:1fr}.nav-links{display:none}.hero{padding-top:110px}}
@@ -43,20 +43,170 @@
 <main>
 <section class="hero" id="home"><div class="hero-grid"><div><span class="eyebrow">Principal Engineer • Lead Software Architect • Engineering Leader</span><h1>Md. Thanvir Ahmed</h1><h2>Building scalable enterprise systems with Java, Spring Boot, Cloud and modern architecture.</h2><p>I am a technology leader with 14+ years of experience across healthcare, e-commerce, industrial IoT, test automation, government systems and Japanese business applications. I lead engineering teams, modernize legacy platforms, design scalable architectures and deliver business-focused software solutions for global clients.</p><a class="btn btn-primary" href="#contact">Contact Me</a><a class="btn" href="https://thanvir-ahmed.github.io/" target="_blank">Portfolio</a><a class="btn" href="https://www.linkedin.com/in/md-thanvir-ahmed-7305b255/" target="_blank">LinkedIn</a></div><aside class="profile-card"><div class="avatar">TA</div><h3>Md. Thanvir Ahmed</h3><p>Dhaka, Bangladesh</p><p>Java • Microservices • Architecture • Cloud • Automation</p><div class="stats"><div class="stat"><strong>14+</strong><span>Years</span></div><div class="stat"><strong>20</strong><span>Engineers Led</span></div><div class="stat"><strong>16</strong><span>Projects</span></div></div></aside></div></section>
 <section id="about"><div class="container"><div class="section-title"><h2>A Brief Introduction</h2><p>Enterprise software architect focused on scalable systems, engineering excellence and global delivery.</p></div><div class="grid grid-2"><div class="card"><h3>Professional Summary</h3><p>Results-driven Principal Engineer and Lead Software Architect with deep expertise in Java, Spring Boot, microservices, distributed systems, REST/SOAP APIs, cloud platforms and CI/CD. Experienced in translating complex business requirements into secure, maintainable and scalable technical solutions.</p><p>I have worked with clients and stakeholders from Japan, USA and Europe, leading engineering teams, mentoring developers, reviewing architecture, improving delivery quality and supporting enterprise modernization initiatives.</p></div><div class="card"><h3>Career Highlights</h3><ul><li>14+ years of professional software engineering experience.</li><li>Led engineering teams of up to 20 members.</li><li>Completed approximately 16 enterprise projects.</li><li>Received 3 promotions based on performance and leadership.</li><li>Strong background in architecture, development, automation and DevOps.</li><li>Target roles: Principal Engineer, Solution Architect, Enterprise Architect.</li></ul></div></div></div></section>
-<section class="dark" id="skills"><div class="container"><div class="section-title"><h2>Technical Proficiency</h2><p>Hands-on technical leadership across backend engineering, architecture, cloud, databases and automation.</p></div><div class="grid grid-3"><div class="card"><h3>Architecture</h3><span class="badge">System Design</span><span class="badge">Microservices</span><span class="badge">Distributed Systems</span><span class="badge">Event-Driven Architecture</span><span class="badge">CQRS</span><span class="badge">Saga Pattern</span><span class="badge">High Availability</span></div><div class="card"><h3>Backend</h3><span class="badge">Java</span><span class="badge">Spring Boot</span><span class="badge">Spring MVC</span><span class="badge">Spring WebFlux</span><span class="badge">Hibernate</span><span class="badge">JPA</span><span class="badge">REST API</span><span class="badge">SOAP</span></div><div class="card"><h3>Cloud & DevOps</h3><span class="badge">AWS</span><span class="badge">Azure</span><span class="badge">Docker</span><span class="badge">Jenkins</span><span class="badge">CI/CD</span><span class="badge">Prometheus</span><span class="badge">Grafana</span></div><div class="card"><h3>Databases</h3><span class="badge">PostgreSQL</span><span class="badge">MySQL</span><span class="badge">SQL Server</span><span class="badge">MongoDB</span><span class="badge">Redis</span><span class="badge">DynamoDB</span></div><div class="card"><h3>Automation</h3><span class="badge">Selenium</span><span class="badge">Playwright</span><span class="badge">Cucumber</span><span class="badge">Rest Assured</span><span class="badge">Appium</span><span class="badge">JUnit</span><span class="badge">Mockito</span></div><div class="card"><h3>Tools</h3><span class="badge">Git</span><span class="badge">Maven</span><span class="badge">Gradle</span><span class="badge">Jira</span><span class="badge">Confluence</span><span class="badge">Astah</span><span class="badge">Agile Scrum</span></div></div></div></section>
+<section class="dark" id="skills"><div class="container"><div class="section-title"><h2>Technical Proficiency</h2><p>Hands-on technical leadership across backend engineering, architecture, cloud, databases and automation.</p></div><div class="grid grid-3">
+<div class="card"><h3>Architecture</h3><span class="badge">System Design</span><span class="badge">Microservices</span><span class="badge">Distributed Systems</span><span class="badge">Event-Driven Architecture</span><span class="badge">CQRS</span><span class="badge">Saga Pattern</span><span class="badge">High Availability</span></div>
+<div class="card"><h3>Backend</h3><span class="badge">Java</span><span class="badge">Spring Boot</span><span class="badge">Spring MVC</span><span class="badge">Spring WebFlux</span><span class="badge">Hibernate</span><span class="badge">JPA</span><span class="badge">REST API</span><span class="badge">SOAP</span></div>
+<div class="card"><h3>Cloud & DevOps</h3><span class="badge">AWS</span><span class="badge">Azure</span><span class="badge">Docker</span><span class="badge">Jenkins</span><span class="badge">CI/CD</span><span class="badge">Prometheus</span><span class="badge">Grafana</span></div>
+<div class="card"><h3>Databases</h3><span class="badge">PostgreSQL</span><span class="badge">MySQL</span><span class="badge">SQL Server</span><span class="badge">MongoDB</span><span class="badge">Redis</span><span class="badge">DynamoDB</span></div>
+<div class="card"><h3>Automation</h3><span class="badge">Selenium</span><span class="badge">Playwright</span><span class="badge">Cucumber</span><span class="badge">Rest Assured</span><span class="badge">Appium</span><span class="badge">JUnit</span><span class="badge">Mockito</span></div>
+<div class="card"><h3>Tools</h3><span class="badge">Git</span><span class="badge">Maven</span><span class="badge">Gradle</span><span class="badge">Jira</span><span class="badge">Confluence</span><span class="badge">Astah</span><span class="badge">Agile Scrum</span></div>
+</div></div></section>
 <section id="experience"><div class="container"><div class="section-title"><h2>Professional History</h2><p>Progressive career growth from Software Engineer to Lead Software Architect.</p></div><div class="timeline">
-<div class="timeline-item"><h3>Lead Software Architect — BJIT Limited</h3><div class="meta">Jul 2025 – Present | Dhaka</div><p><b>Project:</b> GCC Mealkun, Japanese School Lunch Information System</p><ul><li>Lead a 20-member engineering team.</li><li>Modernize legacy PowerBuilder applications into Java Spring Boot based web architecture.</li><li>Design scalable backend services, integration workflows and data processing solutions.</li><li>Conduct architecture reviews, code reviews, estimation, risk analysis and technical governance.</li></ul></div>
-<div class="timeline-item"><h3>Principal Software Engineer — BJIT Limited</h3><div class="meta">Jul 2022 – Jun 2025 | Dhaka</div><p><b>Project:</b> Omron VitalSight Test Automation</p><ul><li>Led automation engineering initiatives for a healthcare solution provider.</li><li>Designed and maintained UI, API and integration automation frameworks.</li><li>Mentored engineers, reviewed test scripts and improved quality practices.</li></ul></div>
+<div class="timeline-item"><h3>Lead Software Architect — BJIT Limited</h3><div class="meta">Jul 2025 – Present | Dhaka</div><p><b>Project:</b> GCC Mealkun, Japanese School Lunch Information System</p><ul><li>Lead a 20-member engineering team.</li><li>Modernize legacy PowerBuilder applications into Java Spring Boot based web architecture.</li><li>Design scalable backend services, integration workflows and data processing solutions.</li></ul></div>
+<div class="timeline-item"><h3>Principal Software Engineer — BJIT Limited</h3><div class="meta">Jul 2022 – Jun 2025 | Dhaka</div><p><b>Project:</b> Omron VitalSight Test Automation</p><ul><li>Led automation engineering initiatives for a healthcare solution provider.</li><li>Designed and maintained UI, API and integration automation frameworks.</li></ul></div>
 <div class="timeline-item"><h3>Senior Software Engineer — BJIT Limited</h3><div class="meta">Aug 2019 – Jun 2022 | Dhaka</div><p><b>Projects:</b> Rakuten Auth API, Rakuten Moderator Web, Rakuten Mobile API, Enterprise Bus Service, Industrial IoT Workflow</p><ul><li>Developed enterprise services using Java, Spring Boot, Spring MVC and Spring WebFlux.</li><li>Prepared sequence diagrams, architecture documentation and unit tests.</li></ul></div>
 <div class="timeline-item"><h3>Software Engineer → Senior Software Engineer — Metatude Asia Ltd</h3><div class="meta">Jan 2014 – Aug 2019 | Dhaka</div><p><b>Projects:</b> Coursepath, Ignity, SurveyVisual, User Management Console</p><ul><li>Developed e-learning and enterprise collaboration platforms for European stakeholders.</li><li>Designed APIs using Java, Spring MVC, Hibernate, PostgreSQL, MySQL and SQL Server.</li></ul></div>
-<div class="timeline-item"><h3>Programmer — ConnectBD Ltd</h3><div class="meta">Dec 2012 – Dec 2013 | Dhaka</div><ul><li>Maintained and enhanced government enterprise applications for Roads and Highways Department.</li><li>Developed features using ASP.NET and SQL Server.</li></ul></div>
-<div class="timeline-item"><h3>Software Engineer — Wempro</h3><div class="meta">Jan 2012 – Nov 2012 | Dhaka</div><ul><li>Developed web applications using JSP, Servlet, PHP, Drupal and MySQL.</li></ul></div>
 </div></div></section>
-<section class="dark" id="projects"><div class="container"><div class="section-title"><h2>A Glimpse of My Work</h2><p>Selected enterprise projects across Japan, USA, Europe and Bangladesh.</p></div><div class="grid grid-2">
-<div class="card"><div class="project-title"><h3>GCC Mealkun</h3><span>Japan</span></div><p>Japanese school lunch information system modernization from legacy desktop architecture to Java Spring Boot and PostgreSQL based web architecture.</p><p><b>Tech:</b> Java, Spring Boot, PostgreSQL, Docker, Jenkins, Maven, Gradle</p></div>
-<div class="card"><div class="project-title"><h3>Omron VitalSight</h3><span>Healthcare</span></div><p>Healthcare automation platform covering UI, API and integration automation using enterprise-grade automation frameworks.</p><p><b>Tech:</b> Java, Selenium, Cucumber, Rest Assured, DynamoDB, AWS, Jenkins</p></div>
-<div class="card"><div class="project-title"><h3>Rakuten Auth API</h3><span>E-commerce</span></div><p>Authentication and authorization API services for e-commerce ecosystem with enterprise integration and reliability focus.</p><p><b>Tech:</b> Java, Spring MVC, Redis, SOAP, Docker, Jenkins, MySQL</p></div>
-<div class="card"><div class="project-title"><h3>Coursepath</h3><span>Europe</span></div><p>E-learning collaboration platform with modular architecture and international stakeholder collaboration.</p><p><b>Tech:</b> Java, Spring, Hibernate, PostgreSQL, JavaScript, Bootstrap</p></div>
+<section class="dark" id="projects"><div class="container"><div class="section-title"><h2>Project Portfolio</h2><p>Detailed project section updated with the project history from the LinkedIn/resume profile.</p></div><div class="grid grid-2">
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>GCC Mealkun</h3>
+            <span>Japan / School Lunch System</span>
+          </div>
+          <p class="project-meta"><strong>07/2025 – Present</strong> | Lead Software Architect</p>
+          <p>Japanese School Lunch Information System modernization project. Focused on migration from legacy business flows to Java Spring Boot based web architecture with PostgreSQL and enterprise delivery practices.</p>
+          <p><strong>Technology:</strong> Java, Spring Boot, PostgreSQL, RESTful Service, Git, Maven, Gradle, Jenkins, Docker, IntelliJ IDEA, Astah, Jira, Confluence</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Omron VitalSight Test Automation</h3>
+            <span>USA / Healthcare</span>
+          </div>
+          <p class="project-meta"><strong>03/2022 – 09/2025</strong> | Lead Software Architect</p>
+          <p>Enterprise healthcare test automation platform for Omron healthcare solution provider. Covered automation strategy, UI/API automation, framework development and delivery leadership.</p>
+          <p><strong>Technology:</strong> Java, Selenium, Cucumber, Rest Assured, DynamoDB, AWS Services, RESTful Service, GitHub, Maven, Jenkins</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Rakuten Moderator Web</h3>
+            <span>Japan / E-commerce</span>
+          </div>
+          <p class="project-meta"><strong>07/2021 – 02/2022</strong> | Principal Software Engineer</p>
+          <p>Moderator web system for Rakuten ecosystem with backend development, REST API integration, unit testing and delivery collaboration.</p>
+          <p><strong>Technology:</strong> Java, Spring MVC, JSP, Mockito, RESTful Service, Git, Maven, Jenkins, Docker, MySQL</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Rakuten Auth API</h3>
+            <span>Japan / E-commerce</span>
+          </div>
+          <p class="project-meta"><strong>01/2021 – 12/2021</strong> | Senior Software Engineer</p>
+          <p>Authentication and authorization API platform for e-commerce applications, including enterprise integration, Redis usage and SOAP/REST service support.</p>
+          <p><strong>Technology:</strong> Java, Spring MVC, Mockito, Redis, SOAP Service, Git, Maven, Jenkins, Docker, MySQL</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Rakuten Mobile App API</h3>
+            <span>Japan / E-commerce</span>
+          </div>
+          <p class="project-meta"><strong>05/2020 – 12/2020</strong> | Senior Software Engineer</p>
+          <p>API services for Rakuten e-commerce mobile application with reactive service implementation and quality-focused backend development.</p>
+          <p><strong>Technology:</strong> Spring WebFlux, Spring Boot, JUnit, Mockito, PowerMockito, Git, Gradle, RESTful Service, MongoDB</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Rakuten Enterprise Bus Service</h3>
+            <span>Japan / Enterprise Integration</span>
+          </div>
+          <p class="project-meta"><strong>05/2020 – 12/2020</strong> | Senior Software Engineer</p>
+          <p>Enterprise service bus and integration service development using reactive Java technologies and Spring Cloud configuration.</p>
+          <p><strong>Technology:</strong> Spring WebFlux, Spring Boot, JUnit 5, Mockito, PowerMockito, Git, Gradle, Spring Cloud Config, RESTful Service</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Custom Workflow Component Development</h3>
+            <span>Industrial IoT</span>
+          </div>
+          <p class="project-meta"><strong>08/2019 – 04/2020</strong> | Senior Software Engineer</p>
+          <p>Custom workflow component development for Industrial IoT using Alfresco Process Services and enterprise Java stack.</p>
+          <p><strong>Technology:</strong> Spring, Alfresco Process Service, Microsoft Azure, Hibernate, JPA, JUnit 5, Mockito, Restito, Maven, Git</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Ignity - Dynamic Reporting</h3>
+            <span>Europe / Reporting Platform</span>
+          </div>
+          <p class="project-meta"><strong>04/2016 – 08/2019</strong> | Senior Software Engineer</p>
+          <p>Dynamic reporting platform involving REST API development, reporting features, performance improvement and stakeholder collaboration.</p>
+          <p><strong>Technology:</strong> Angular, Java Spring, REST, MySQL, SQL Server</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>User Management Console</h3>
+            <span>Enterprise Platform</span>
+          </div>
+          <p class="project-meta"><strong>04/2018 – 12/2018</strong> | Senior Software Engineer</p>
+          <p>User management console with REST-based backend development, modular design and enterprise platform support.</p>
+          <p><strong>Technology:</strong> Java Spring, REST, SQL Server</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Coursepath</h3>
+            <span>Europe / E-learning</span>
+          </div>
+          <p class="project-meta"><strong>01/2014 – 03/2016</strong> | Software Engineer / Associate Software Engineer</p>
+          <p>E-learning collaboration platform with MVC architecture, reusable modules and international stakeholder communication.</p>
+          <p><strong>Technology:</strong> WAX JEE Framework, WAX JsonObject, jQuery, HTML5, Twitter Bootstrap, PostgreSQL</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Central Management System</h3>
+            <span>Bangladesh Government</span>
+          </div>
+          <p class="project-meta"><strong>12/2012 – 05/2013</strong> | Programmer</p>
+          <p>Government web application development for Roads and Highways Department central management system.</p>
+          <p><strong>Technology:</strong> ASP.NET, Code Author, SQL Server</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>RHD Archive</h3>
+            <span>Bangladesh Government</span>
+          </div>
+          <p class="project-meta"><strong>09/2013 – 12/2013</strong> | Programmer</p>
+          <p>Archive module development and maintenance for Roads and Highways Department.</p>
+          <p><strong>Technology:</strong> ASP, JavaScript, SQL Server</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>RHD Focal Point</h3>
+            <span>Bangladesh Government</span>
+          </div>
+          <p class="project-meta"><strong>06/2013 – 08/2013</strong> | Programmer</p>
+          <p>Focal point module development and feature support for government application.</p>
+          <p><strong>Technology:</strong> ASP, JavaScript, SQL Server</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>Online Job Application System</h3>
+            <span>Web Application</span>
+          </div>
+          <p class="project-meta"><strong>06/2012 – 11/2012</strong> | Software Engineer</p>
+          <p>Online recruitment/job application system development using Java web technologies.</p>
+          <p><strong>Technology:</strong> JSP, Servlet, MySQL</p>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-title">
+            <h3>USA Company Pump Website</h3>
+            <span>Corporate Website</span>
+          </div>
+          <p class="project-meta"><strong>01/2012 – 05/2012</strong> | Software Engineer</p>
+          <p>Corporate website development using Drupal CMS and MySQL.</p>
+          <p><strong>Technology:</strong> Drupal, MySQL</p>
+        </div>
 </div></div></section>
 <section id="education"><div class="container"><div class="section-title"><h2>Education & Certifications</h2><p>Academic background and continuous professional learning.</p></div><div class="grid grid-2"><div class="card"><h3>Academic Qualifications</h3><p><b>B.Sc. in Computer Science & Engineering</b></p><p>Mawlana Bhashani Science & Technology University, 2006 – 2010</p><p><b>HSC:</b> Shaheed Ramiz Uddin College, Science</p><p><b>SSC:</b> Shaheed Smrity High School, Science</p></div><div class="card"><h3>Training & Certifications</h3><ul><li>Rest API Testing Automation - Rest Assured Java</li><li>Selenium WebDriver with Java</li><li>AWS Certified Cloud Practitioner CLF-C02</li><li>Reactive Microservices using Spring WebFlux/Spring Boot</li><li>Software Design / Architecture - BITM</li></ul><h3>Languages</h3><p>English: Professional Working Proficiency</p><p>Japanese: Basic Working Knowledge</p></div></div></div></section>
 <section id="contact"><div class="container"><div class="contact-box"><h2>Get In Touch</h2><p>Interested in Principal Engineer / Architect opportunities?</p><p><b>Phone:</b> <a href="tel:+8801727211513">+8801727211513</a></p><p><b>Email:</b> <a href="mailto:thanvir.cse@gmail.com">thanvir.cse@gmail.com</a></p><p><b>Location:</b> Dhaka, Bangladesh</p><p><b>Target Markets:</b> USA, Canada, Japan, Europe, Australia</p></div></div></section>
